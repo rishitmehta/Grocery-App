@@ -1,31 +1,21 @@
+<ion-tabs>
 
-<ion-content  color="primary" class="ion-text-center">
-  <ion-grid>
-    <ion-row>
-      <ion-col>
-        <img src="..\assets\icon\Grocart.png"/>
-      </ion-col>
-    </ion-row>
-    
-    <ion-row id="title-bar">
-      <ion-col>
-        <h1 color="light">Welcome to <b>GROCART</b></h1>
-        <h2>One stop to all your grocery shopping</h2>
-      </ion-col>
-    </ion-row>
-    
-    <ion-row class="ion-padding-top">
-      <ion-col>
-        <ion-button color="light" type="block">Sign In</ion-button>
-      </ion-col>
-    </ion-row>
-    
-    <ion-row>
-      <ion-col>
-        <ion-button type="block" color="primary">Sign Up</ion-button>
-      </ion-col>
-    </ion-row>
-     
+  <ion-tab-bar slot="bottom" color="dark">
+    <ion-tab-button tab="hometab">
+      <ion-icon name="home-outline"></ion-icon>
+      <ion-label>Home</ion-label>
+    </ion-tab-button>
 
-  </ion-grid>
-</ion-content>
+    <ion-tab-button tab="categoriestab">
+      <ion-icon name="copy-outline"></ion-icon>
+      <ion-label>Categories</ion-label>
+    </ion-tab-button>
+
+    <ion-tab-button tab="profiletab">
+      <ion-icon name="person-circle-outline"></ion-icon>
+      <ion-label>Profile</ion-label>
+    </ion-tab-button>
+
+  </ion-tab-bar>
+
+</ion-tabs>
