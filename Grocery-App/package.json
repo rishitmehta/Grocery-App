@@ -30,11 +30,7 @@
     "@ionic-native/status-bar": "^5.0.0",
     "@ionic/angular": "^5.0.0",
     "cordova-plugin-firebase": "^2.0.5",
-<<<<<<< HEAD
-    "jshint": "^2.11.1",
-=======
     "firebase": "^7.14.4",
->>>>>>> acce3b66985110f2b728a60f547250ad8a995d5a
     "rxjs": "~6.5.1",
     "tslib": "^1.10.0",
     "zone.js": "~0.10.2"
