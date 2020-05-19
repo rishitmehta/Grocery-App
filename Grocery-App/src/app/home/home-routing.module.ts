@@ -9,7 +9,7 @@ const routes: Routes = [
 
     children: [
       {
-        path: 'Hometab',
+        path: 'hometab',
         loadChildren: () => import('src/app/pages/hometab/hometab.module')
         .then(m => m.HometabPageModule)
       },
