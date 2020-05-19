@@ -21,7 +21,4 @@ const routes: Routes = [
 })
 export class AppRoutingModule { }
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
-  ],
   exports: [RouterModule]
-})
-export class AppRoutingModule { }
