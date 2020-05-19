@@ -36,22 +36,5 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-
 export class HomePageRoutingModule {}
-.then(m => m.CategoriestabPageModule)
-      },
 
-      {
-        path: '',
-        redirectTo: '/home/hometab',
-        pathMatch: 'full'
-      }
-    ]
-  }
-];
-
-@NgModule({
-  imports: [RouterModule.forChild(routes)],
-  exports: [RouterModule]
-})
-export class HomePageRoutingModule {}
