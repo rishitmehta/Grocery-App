@@ -1,5 +1,8 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
     <ion-title>Signup</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -7,12 +10,12 @@
 <ion-content padding>
 
   <ion-item>
-    <ion-label floating>Email Address</ion-label>
+    <ion-label position="stacked">Email Address<ion-text color="danger">*</ion-text></ion-label>
     <ion-input type="text" [(ngModel)]="user.email"></ion-input>
   </ion-item>
 
   <ion-item>
-    <ion-label floating>Password</ion-label>
+    <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
     <ion-input type="password" [(ngModel)]="user.password"></ion-input>
   </ion-item>
 
