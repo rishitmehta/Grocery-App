@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>UserDetails</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label floating>name</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.name"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Mobile Number</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.phoneNo"></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label floating>Address</ion-label>
+    <ion-input type="text" [(ngModel)]="profile.address"></ion-input>
+  </ion-item>
+  <ion-button (click)="Register(profile)">Save Details</ion-button>
+</ion-content>

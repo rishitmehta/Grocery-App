@@ -7,5 +7,10 @@
     <param name="onload" value="true"/>
   </feature>
 
+  <feature name="FirebaseAuthentication">
+    <param name="android-package" value="by.chemerisuk.cordova.firebase.FirebaseAuthenticationPlugin"/>
+    <param name="onload" value="false"/>
+  </feature>
+
   
 </widget>
