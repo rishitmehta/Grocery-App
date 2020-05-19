@@ -9,17 +9,17 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./home/home.module').then( m => m.HomePageModule)
-  },
-    path: 'user-details',
- ;  loadChildren: () => import('./user-details/user-details.module').then( m => m.UserDetailsPageModule)
-  },
-
-
+  }
 
 ];
 
 @NgModule({
   imports: [
+    RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
+  ],
+  exports: [RouterModule]
+})
+export class AppRoutingModule { }
     RouterModule.forRoot(routes, { preloadingStrategy: PreloadAllModules })
   ],
   exports: [RouterModule]

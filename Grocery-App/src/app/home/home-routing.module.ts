@@ -9,38 +9,36 @@ const routes: Routes = [
 
     children: [
       {
-        path: 'hometab',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../pages/hometab/hometab.module').then(m => m.HometabPageModule)
-          }
-        ]
+        path: 'Hometab',
+        loadChildren: () => import('src/app/pages/hometab/hometab.module')
+        .then(m => m.HometabPageModule)
       },
       {
         path: 'categoriestab',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../pages/categoriestab/categoriestab.module').then(
-                m => m.CategoriestabPageModule
-              )
-          }
-        ]
+        loadChildren: () => import('src/app/pages/categoriestab/categoriestab.module')
+        .then(m => m.CategoriestabPageModule)
       },
       {
         path: 'profiletab',
-        children: [
-          {
-            path: '',
-            loadChildren: () =>
-              import('../pages/profiletab/profiletab.module').then(
-                m => m.ProfiletabPageModule
-              )
-          }
-        ]
+        loadChildren: () => import('src/app/pages/profiletab/profiletab.module')
+        .then(m => m.ProfiletabPageModule)
+      },
+      {
+        path: '',
+        redirectTo: '/home/hometab',
+        pathMatch: 'full'
+      }
+    ]
+  }
+];
+
+@NgModule({
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule]
+})
+
+export class HomePageRoutingModule {}
+.then(m => m.CategoriestabPageModule)
       },
 
       {
