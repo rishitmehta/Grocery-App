@@ -11,6 +11,7 @@ import { AppRoutingModule } from './app-routing.module';
 //by kishan - firebase configuration
 import { AngularFireModule} from '@angular/fire';
 import{ environment} from 'src/environments/environment';
+import { UserProfileService } from './models/user-profile.service';
 //import {AngularFirestoreModule }from '@angular/fire/firestore'
 @NgModule({
   declarations: [AppComponent],
@@ -20,7 +21,8 @@ import{ environment} from 'src/environments/environment';
   providers: [
     StatusBar,
     SplashScreen,
-    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy }
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
+    UserProfileService
     //for production change database type in firebase 
     //{ provide: FirestoreSettingsToken, useValue: {} } 
   ],

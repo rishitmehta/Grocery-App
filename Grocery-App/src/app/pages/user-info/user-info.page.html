@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title color="dark" class="ion-text-center">User-info</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <form>
+    <ion-list lines="full" class="ion-no-margin ion-no-padding">
+      <ion-item>
+        <ion-label position="stacked">First Name <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text" [(ngModel)]="profile.fname" ></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Last Name <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type="text"[(ngModel)]="profile.lname"></ion-input>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label position="stacked">Mobile No.<ion-text color="danger">*</ion-text></ion-label>
+        <ion-input required type='Mobile'   [(ngModel)]="profile.phoneNo"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label position="stacked">Address <ion-text color="danger">*</ion-text></ion-label>
+        <ion-input placeholder="Address Line 1" [(ngModel)]="profile.address"></ion-input>
+        <ion-input placeholder="Address Line 2" [(ngModel)]="profile.address"></ion-input>
+        <ion-input placeholder="City" [(ngModel)]="profile.address"></ion-input>
+        <ion-input placeholder="State" [(ngModel)]="profile.address"></ion-input>
+        <ion-input placeholder="Zip Code" [(ngModel)]="profile.address"></ion-input>
+      </ion-item>
+
+    </ion-list>
+
+    <div class="ion-padding">
+      <ion-button expand="full" type="submit" class="ion-no-margin">Sign Up</ion-button>
+    </div>
+  </form>
+</ion-content>
