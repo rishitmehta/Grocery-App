@@ -1,3 +1,4 @@
+<ion-app>
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
@@ -9,15 +10,39 @@
 
 <ion-content padding>
 
-  <ion-item>
-    <ion-label position="stacked">Email Address<ion-text color="danger">*</ion-text></ion-label>
-    <ion-input type="text" [(ngModel)]="user.email"></ion-input>
-  </ion-item>
-
-  <ion-item>
-    <ion-label position="stacked">Password<ion-text color="danger">*</ion-text></ion-label>
-    <ion-input type="password" [(ngModel)]="user.password"></ion-input>
-  </ion-item>
-
-  <ion-button (click)="Register(user)">validate</ion-button>
+  <ion-card color="transparent" class="CardCenter">
+    <ion-card-content>
+      <ion-grid>
+        <ion-row>
+          <ion-col >
+            <div >
+              <img src="..\assets\icon\GrocartGreen.png" width="300px" class="imgcenter"/> 
+            </div>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <ion-item>
+              <ion-label position="floating">Email</ion-label>
+              <ion-input type="email" [(ngModel)]="user.email "></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col >
+            <ion-item>
+              <ion-label position="floating">Password</ion-label>
+              <ion-input type="Password"  [(ngModel)]="user.password"></ion-input>
+            </ion-item>
+          </ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding">
+              <ion-button expand="full" (click)="Register(user)">Sign UP</ion-button>  
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>   
 </ion-content>
+</ion-app>

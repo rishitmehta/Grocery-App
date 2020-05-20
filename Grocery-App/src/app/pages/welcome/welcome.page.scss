@@ -40,3 +40,21 @@
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
   }
+
+  .CardCenter{
+    box-shadow: none;
+    display:block;
+    margin:auto;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 40%;
+    width: 100%;
+    > div {
+        position: relative; 
+    }
+}
+
+.imgcenter{
+  display:block;
+  margin:auto;
+}
