@@ -1,17 +1,20 @@
+<ion-app>
 <ion-header>
     <ion-toolbar color="primary">
-      <ion-title class="ion-text-center">Login</ion-title>
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/"></ion-back-button>
+      </ion-buttons>
+      <ion-title class="ion-align-center">Login</ion-title>
     </ion-toolbar>
   </ion-header>
   
-  <ion-card color="light">
-    <ion-card-header class="ion-padding-top">
-    </ion-card-header>
   
+<ion-content>
+  <ion-card color="transparent" class="CardCenter">
     <ion-card-content>
       <ion-grid>
         <ion-row>
-          <ion-col size-md="6" offset-md="3">
+          <ion-col >
             <ion-item>
               <ion-label position="floating">Email</ion-label>
               <ion-input type="email" [(ngModel)]="user.email "></ion-input>
@@ -19,22 +22,28 @@
           </ion-col>
         </ion-row>
         <ion-row>
-          <ion-col size-md="6" offset-md="3">
+          <ion-col >
             <ion-item>
               <ion-label position="floating">Password</ion-label>
               <ion-input type="Password"  [(ngModel)]="user.password"></ion-input>
             </ion-item>
           </ion-col>
         </ion-row>
+        <ion-row>
+          <ion-col class="ion-padding">
+              <ion-button expand="full" (click)="login(user)">Login</ion-button>  
+          </ion-col>
+        </ion-row>
       </ion-grid>
     </ion-card-content>
-  </ion-card>
+  </ion-card>   
+</ion-content>
+
+
+
+<div slot="bottom" class="ion-align-self-center ion-padding">
+  Not registered? <a routerLink="/signup">Sign Up</a>
+</div>
+
+</ion-app>
   
-  <ion-button expand="full" class="ion-padding-vertical" size-md="6" (click)="login(user)">Login</ion-button>
-  
-      <div class="ion-align-self-center">
-        <p>Not registered? 
-            <ion-button routerLink="/signup">Register</ion-button>
-                Sign up
-        </p>
-      </div>

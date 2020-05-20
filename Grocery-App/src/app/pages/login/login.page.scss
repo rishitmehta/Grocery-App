@@ -1,0 +1,14 @@
+.CardCenter{
+    box-shadow: none;
+    position: absolute;
+    transform: translateY(-50%);
+    top: 50%;
+    width: 100%;
+    > div {
+        position: relative; 
+    }
+}
+
+.ShadowNone{
+    --box-shadow: none !important;
+}
