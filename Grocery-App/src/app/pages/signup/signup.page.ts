@@ -31,7 +31,9 @@ export class SignupPage implements OnInit {
   async Register(user: User){
     try{
       const result = await this.afAuth.createUserWithEmailAndPassword(user.email, user.password);//ac to ionic doc auth not needed 
-      
+      if(result){
+        this.router.navigate(['/userinfo'])
+      }
       
     }
     catch(e){

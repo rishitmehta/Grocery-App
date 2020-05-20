@@ -23,12 +23,16 @@ export class LoginPage implements OnInit {
     try{
      const result = await this.afAuth.signInWithEmailAndPassword(user.email, user.password);
      console.log(result);
-     if(result){
-      this.router.navigate[('home/hometab')];
-     }
+     //if(result){
+      this.router.navigate(['/home/hometab'])
+     //}
     }
     catch(e){
       console.error(e);
+    }
+    finally{
+      this.router.navigate(['/home/hometab'])
+
     }
     
   }

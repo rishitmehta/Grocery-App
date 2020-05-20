@@ -4,7 +4,8 @@ import { User } from 'src/app/models/user';
  export interface Profile {
     email:string;
     password: string;
-    name: string;
+    fname: string;
+    lname: string;
     address: string;
     phoneNo: number;
  }
