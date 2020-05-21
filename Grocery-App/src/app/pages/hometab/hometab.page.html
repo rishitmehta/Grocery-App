@@ -3,7 +3,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="end">
-      <ion-button >
+      <ion-button (click)="openCart()">
         <ion-icon  name="cart-outline"></ion-icon>
         <div class="cart-length">{{cartItemCount | async}}</div>
       </ion-button>
