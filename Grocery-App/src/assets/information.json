@@ -15,17 +15,32 @@
             ]
         },
         {
-            "name": "Drinks",
+            "name": "Vegetables",
             "children": [
                 {
-                    "name": "Blue Moon",
-                    "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    "price": "$5"
+                    "name": "Onions 1kg",
+                    "price": "₹25"
                 },
                 {
-                    "name": "White Shark",
-                    "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
-                    "price": "$6"
+                    "name": "Cabbage 1kg",
+                    "price": "₹30"
+                },
+                {
+                    "name": "Cauliflower 1kg",
+                    "price": "₹60"
+                }
+            ]
+        },
+        {
+            "name": "Fruits",
+            "children": [
+                {
+                    "name": "Bananas 6pcs",
+                    "price": "₹25"
+                },
+                {
+                    "name": "Apple 4pcs",
+                    "price": "₹100"
                 }
             ]
         },
