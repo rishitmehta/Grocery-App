@@ -10,8 +10,8 @@
   <!-- automaticClose = !automaticClose -->
 <ion-list *ngFor="let item of information; let i = index;" class="accordion-list" lines="none" detail="false" no-padding>
   <ion-item tappable (click)="toggleSection(i)" [ngClass]="{'section-active': item.open, 'section': !item.open}">
-    <ion-icon slot="start" name="arrow-forward" *ngIf="!item.open"></ion-icon>
-    <ion-icon slot="start" name="arrow-down" *ngIf="item.open"></ion-icon>
+    <ion-icon slot="end" name="arrow-forward" *ngIf="!item.open"></ion-icon>
+    <ion-icon slot="end" name="arrow-down" *ngIf="item.open"></ion-icon>
     <ion-label>
       {{item.name}}
     </ion-label>
