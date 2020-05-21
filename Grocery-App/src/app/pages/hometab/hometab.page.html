@@ -13,25 +13,22 @@
 </ion-header>
 
 <ion-searchbar></ion-searchbar>
-  <ion-list class="ion-align-self-center">
-    <ion-card *ngFor="let p of products">
-      <ion-label>
-        <h2>{{ p.name }}</h2>
-      </ion-label>
-      <h5>{{ p.price | currency:'INR' }}</h5>
-          <ion-item>
-            <ion-row no-padding>
+  <ion-list class="ion-no-padding" *ngFor="let p of products">
+      <ion-item slot="start">
+        <h4 class="namelabel">{{ p.name }}</h4>
+        <h5 slot="end" class="pricelabel">{{ p.price | currency:'INR' }}</h5>
+      
+            <ion-row slot="end">
               <ion-col col-8>
-                  <ion-button shape="round" (click)="addToCart(p,1)">
+                  <ion-button shape="round" (click)="addToCart(p,-1)">
                       <ion-icon name="remove-circle-outline"></ion-icon>
                   </ion-button>
                   <ion-button fill="clear"> {{ p.amount }} </ion-button>
-                  <ion-button shape="round" (click)="addToCart(p,-1)">
+                  <ion-button shape="round" (click)="addToCart(p,1)">
                     <ion-icon name="add-circle-outline"></ion-icon>
                   </ion-button>
               </ion-col>
             </ion-row>
-          </ion-item>
-    </ion-card>
+        </ion-item>
   </ion-list>
 </ion-content>
