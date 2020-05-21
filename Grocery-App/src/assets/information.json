@@ -1,0 +1,52 @@
+{
+    "items": [
+        {
+            "name": "Dairy Products",
+            "children": [
+                {
+                    "name": "Milk 500ml",
+                    "price": "₹25"
+
+                },
+                {
+                    "name": "Paneer 200gms",
+                    "price": "₹70"
+                }
+            ]
+        },
+        {
+            "name": "Vegetables",
+            "children": [
+                {
+                    "name": "Onions 1kg",
+                    "price": "₹25"
+                },
+                {
+                    "name": "Cabbage 1kg",
+                    "price": "₹30"
+                },
+                {
+                    "name": "Cauliflower 1kg",
+                    "price": "₹60"
+                }
+            ]
+        },
+        {
+            "name": "Fruits",
+            "children": [
+                {
+                    "name": "Bananas 6pcs",
+                    "price": "₹25"
+                },
+                {
+                    "name": "Apple 4pcs",
+                    "price": "₹100"
+                }
+            ]
+        },
+        {
+            "name": "Coupons",
+            "children": []
+        }
+    ]
+}

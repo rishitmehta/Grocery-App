@@ -12,25 +12,28 @@ import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule} from '@angular/fire';
 //import { AngularFireModule } from 'angularfire2';
 import{ environment} from 'src/environments/environment';
-import { UserProfileService } from './models/user-profile.service';
 //import { AngularFirestoreModule } from 'angularfire2/firestore';
 import {AngularFirestoreModule }from '@angular/fire/firestore';
 //import { auth } from ‘firebase’;
+import {HttpClientModule} from '@angular/common/http';
+import { from } from 'rxjs';
+//import { CartService } from './models/cart.service';
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule
+    AngularFirestoreModule,HttpClientModule
   ],
   providers: [
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    UserProfileService
+    
     //for production change database type in firebase 
     //{ provide: FirestoreSettingsToken, useValue: {} } 
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
+
