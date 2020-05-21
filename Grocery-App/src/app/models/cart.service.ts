@@ -4,7 +4,8 @@ export interface Product {
   id: number;
   name: string;
   price: number;
-   amount: number;
+  amount: number;
+  cat:string;
 }
 
 @Injectable({
@@ -13,10 +14,12 @@ export interface Product {
 export class CartService {
 
   data: Product[] = [
-    { id: 0, name: 'Pizza Salami', price: 8.99, amount: 0 },
-    { id: 1, name: 'Pizza Classic', price: 5.49, amount: 0 },
-    { id: 2, name: 'Sliced Bread', price: 4.99, amount: 0 },
-    { id: 3, name: 'Salad', price: 6.99, amount: 0 },
+    { id: 0, name: 'mango -12pc', price: 899, amount: 0,cat:"freq" },
+    { id: 1, name: 'milk-0.5L', price: 54.9, amount: 0,cat:"freq" },
+    { id: 2, name: 'bread -300g', price: 4.99, amount: 0, cat:"freq"},
+    { id: 3, name: 'tomato -0.5kg', price: 6.99, amount: 0,cat:"freq"},
+    { id: 3, name: 'tomato -0.5kg', price: 6.99, amount: 0,cat:"fre"},
+
   ];
 
   private cart = [];
@@ -26,6 +29,12 @@ export class CartService {
   
   getProducts() {
     return this.data;
+  }
+  getProductsByCat(catregory) {
+
+    return this.data.filter(function(space) {
+      return space.cat===catregory;
+    });;
   }
  
   getCart() {

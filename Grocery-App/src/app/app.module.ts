@@ -18,12 +18,13 @@ import {AngularFirestoreModule }from '@angular/fire/firestore';
 import {HttpClientModule} from '@angular/common/http';
 import { from } from 'rxjs';
 //import { CartService } from './models/cart.service';
+import {CartModalPageModule} from 'src/app/pages/cart-modal/cart-modal.module'
 @NgModule({
   declarations: [AppComponent],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule,
     AngularFireModule.initializeApp(environment.firebase),
-    AngularFirestoreModule,HttpClientModule
+    AngularFirestoreModule,HttpClientModule, CartModalPageModule
   ],
   providers: [
     StatusBar,
