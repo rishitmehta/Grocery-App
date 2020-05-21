@@ -23,16 +23,16 @@
       </ion-label>
       <h5>₹30/Kg</h5>
 
-          <ion-item class="compact">
-            <ion-row no-padding>
+          <ion-item padding>
+            <ion-row>
               <ion-col col-8>
-                  <button ion-button icon-only clear  (click)="changeQty(item, -1)">
-                      <ion-icon name="remove-circle"></ion-icon>
-                  </button>
-                  <button ion-button clear color="danger"> {{ itemqty }} </button>
-                  <button ion-button icon-only clear  (click)="changeQty(item, 1)">
-                    <ion-icon name="add-circle"></ion-icon>
-                  </button>
+                  <ion-button shape="round" (click)="changeQty(item, -1)">
+                      <ion-icon name="remove-circle-outline"></ion-icon>
+                  </ion-button>
+                  <ion-button fill="clear"> {{ itemqty }} </ion-button>
+                  <ion-button  shape="round" (click)="changeQty(item, 1)">
+                    <ion-icon name="add-circle-outline"></ion-icon>
+                  </ion-button>
               </ion-col>
             </ion-row>
           </ion-item>
