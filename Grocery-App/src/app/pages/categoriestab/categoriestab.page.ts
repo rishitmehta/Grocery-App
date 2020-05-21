@@ -34,10 +34,6 @@ export class CategoriestabPage implements OnInit {
     }
   }
 
-  toggleItem(index, childIndex){
-    this.information[index].children[childIndex].open = !this.information[index].open;
-  }
-
   async buyItem(category){
     const toast = await this.toastCtrl.create({
       message: 'Added to the Cart: ${category.name}',
