@@ -1,0 +1,36 @@
+{
+    "items": [
+        {
+            "name": "Dairy Products",
+            "children": [
+                {
+                    "name": "Milk 500ml",
+                    "price": "₹25"
+                },
+                {
+                    "name": "Paneer 200gms",
+                    "price": "₹70"
+                }
+            ]
+        },
+        {
+            "name": "Drinks",
+            "children": [
+                {
+                    "name": "Blue Moon",
+                    "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "price": "$5"
+                },
+                {
+                    "name": "White Shark",
+                    "information": "Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+                    "price": "$6"
+                }
+            ]
+        },
+        {
+            "name": "Coupons",
+            "children": []
+        }
+    ]
+}
