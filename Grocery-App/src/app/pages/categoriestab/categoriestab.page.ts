@@ -7,6 +7,7 @@ import { ToastController } from '@ionic/angular';
   templateUrl: './categoriestab.page.html',
   styleUrls: ['./categoriestab.page.scss'],
 })
+
 export class CategoriestabPage implements OnInit {
 
   @Input('category') category: any;
@@ -15,6 +16,8 @@ export class CategoriestabPage implements OnInit {
   information: any[];
 
   automaticClose = false;
+  cartService: any;
+  itemQty = 0;
 
   constructor(private http: HttpClient, private toastCtrl: ToastController) {
     this.http.get('../assets/information.json').subscribe(res => {
@@ -29,17 +32,48 @@ export class CategoriestabPage implements OnInit {
 
     if (this.automaticClose && this.information[index].open){
       this.information
-      .filter((item, itemIndex) => itemIndex !== index)
+      .filter((itemIndex) => itemIndex !== index)
       .map(item => item.open = false);
     }
   }
 
-  async buyItem(category){
-    const toast = await this.toastCtrl.create({
-      message: 'Added to the Cart: ${category.name}',
-      duration: 600
-    });
-    toast.present();
+
+  // addToCart(product, num) {
+  //   // this.animateCSS('tada');
+  //   if(num == 1){
+  //     this.cartService.addProduct(product);
+  //   }
+  //   else
+  //   {
+  //     this.cartService.decreaseProduct(product);
+
+  //   }
+  // }
+
+  async addToCart( num){
+    if (num === 1){
+      this.itemQty += 1;
+      if (this.itemQty < 2){
+      const toast = await this.toastCtrl.create({
+        message: 'Added to the Cart',
+        duration: 600
+      });
+      toast.present();
+      }
+      return;
+    }
+    if (this.itemQty >= 1) {
+      if (num === -1) {
+        this.itemQty -= 1;
+        if (this.itemQty === 0){
+        const toast = await this.toastCtrl.create({
+          message: 'Removed from the Cart',
+          duration: 600
+        });
+        toast.present();
+        }
+      }
+    }
   }
 
   ngOnInit() {
