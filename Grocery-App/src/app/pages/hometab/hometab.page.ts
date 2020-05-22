@@ -17,15 +17,19 @@ export class HometabPage implements OnInit {
 
   cart = [];
   products = [];
+  products2 = [];
   cartItemCount: BehaviorSubject<number>;
+  cat='freq'
   //fab: any;
   @ViewChild('cart', {static: false, read: ElementRef})fab: ElementRef;
   constructor(
     private cartService: CartService, private modalCtrl: ModalController) { }
   
   ngOnInit() {
-    this.products = this.cartService.getProducts();
-    //this.products = this.cartService.getProductsByCat();
+    //this.products = this.cartService.getProducts();
+    this.products = this.cartService.getProductsByCat(this.cat);
+    //console.log(this.products2);
+    
     this.cart = this.cartService.getCart();
     this.cartItemCount = this.cartService.getCartItemCount();
     console.log(this.products)
