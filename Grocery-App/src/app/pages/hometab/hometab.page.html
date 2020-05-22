@@ -24,11 +24,18 @@
                       <ion-icon name="remove-circle-outline"></ion-icon>
                   </ion-button>
                   <ion-button fill="clear"> {{ p.amount }} </ion-button>
-                  <ion-button shape="round" (click)="addToCart(p,1)">
+                  <ion-button shape="round" (click)="addToCart(p,1);">
                     <ion-icon name="add-circle-outline"></ion-icon>
                   </ion-button>
               </ion-col>
             </ion-row>
         </ion-item>
+
+        <ion-item *ngIf="show">
+           <ion-button >Hello</ion-button>
+        </ion-item>
+       
   </ion-list>
+
+  
 </ion-content>

@@ -1,3 +1,4 @@
+import { async } from '@angular/core/testing';
 import { CartService } from './../../models/cart.service';
 import { Profile } from './../../models/Profile';
 import { Component, OnInit, ViewChild, ElementRef } from '@angular/core';
@@ -14,7 +15,7 @@ import { CartModalPage } from '../cart-modal/cart-modal.page';
   styleUrls: ['./hometab.page.scss'],
 })
 export class HometabPage implements OnInit {
-
+  public show:boolean = false;
   cart = [];
   products = [];
   cartItemCount: BehaviorSubject<number>;
@@ -28,8 +29,7 @@ export class HometabPage implements OnInit {
     // this.products = this.cartService.getProductsByCat();
     this.cart = this.cartService.getCart();
     this.cartItemCount = this.cartService.getCartItemCount();
-    console.log(this.products)
-    console.log(this.cart)
+   
   }
 
   addToCart(product,num) {
@@ -40,9 +40,16 @@ export class HometabPage implements OnInit {
     else
     {
       this.cartService.decreaseProduct(product);
-
+    }
+    if(this.cartItemCount.value>0){
+      this.show= true;
+    }
+    else{
+      this.show= false;
     }
   }
+
+  
 
   async openCart() {
     // this.animateCSS('bounceOutLeft', true);
