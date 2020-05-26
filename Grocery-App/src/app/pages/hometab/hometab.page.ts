@@ -18,7 +18,6 @@ export class HometabPage implements OnInit {
   public show:boolean = false;
   cart = [];
   products = [];
-  products2 = [];
   cartItemCount: BehaviorSubject<number>;
 
   cat='freq'

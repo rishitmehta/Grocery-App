@@ -24,6 +24,14 @@ export class CartService {
       { id: 1, name: 'milk-0.5L', price: 54.9, amount: 0, cat: 'freq' },
       { id: 2, name: 'bread -300g', price: 4.99, amount: 0, cat: 'freq'},
       { id: 3, name: 'tomato -0.5kg', price: 6.99, amount: 0, cat: 'freq'},
+      { id: 4, name: 'Milk 500ml', price: 25, amount: 0, cat: 'Dairy Products'},
+      { id: 5, name: 'Paneer 200gms', price: 70, amount: 0, cat: 'Dairy Products'},
+      { id: 5, name: 'Paneer 200gms', price: 70, amount: 0, cat: 'Vegetables'},
+
+
+
+      
+
 
     ];
 
@@ -35,6 +43,19 @@ export class CartService {
     return this.data.filter(function (space) {
       return space.cat === catregory;
     });
+  }
+  getAllCat(){
+    var lookup = {};
+    //var items = json.DATA;
+    var result = [];
+    for (var item, i = 0; item = this.data[i++];) {
+      var name = item.cat;
+      if (!(name in lookup)) {
+        lookup[name] = 1;
+        result.push(name);
+    }
+    }
+    return result;
   }
 
   getCart() {
